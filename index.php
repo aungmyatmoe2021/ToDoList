@@ -12,11 +12,8 @@
     </form>
     <?php
         if(isset($_COOKIE["todolist"])){
-            // $data = explode("\n",$_COOKIE["todolist"]);
-            // for($i=0; $i<count($data);$i++){
-            //     echo $data[$i];
-            // }
             $data = $_COOKIE["todolist"];
+            $data = substr($data, 0, -3);
             $result = explode(";;;",$data);
             echo "<table><tr><td>No.</td><td>Task</td><td>Action</td></tr>";
             for($i=0; $i<count($result);$i++){

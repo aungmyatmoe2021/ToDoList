@@ -5,7 +5,7 @@
         if(str_contains($_COOKIE['todolist'], $task)){
             $cookie_value = str_replace($task.";;;","",$_COOKIE['todolist']);
         }else{
-            $cookie_value = $_COOKIE['todolist'] . ';;;' . $task;
+            $cookie_value = $task . ';;;' . $_COOKIE['todolist'];
         }
     }else{
         $cookie_value = $task. ";;;";
